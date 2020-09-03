@@ -26,7 +26,8 @@ export const useData = () => {
           
           return {
             population,
-            livingIndex
+            livingIndex,
+            id: item.name
           }
         }));
   

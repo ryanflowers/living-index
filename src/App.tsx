@@ -1,13 +1,16 @@
 import * as React from 'react';
-import './App.css';
-import {DataList} from "./Component";
+import styles from './App.module.css';
+import {DataList} from "./DataList";
 import { useData } from "./hooks/data";
 
 function App() {
   
   const data = useData();
 
-  return <DataList data={data}></DataList>;
+  return <div className={styles.App}>
+    <DataList data={data}></DataList>  
+  </div>;
+  
 }
 
 export default App;
