@@ -12,6 +12,7 @@ export const useData = () => {
        
         const areas = await (await fetch(endpoint)).json();
   
+        // TODO Batch these in sets of 5 appending to data to update view asap
         const data = await Promise.all(areas._links['ua:item'].map(async (item: any) => {
   
           const {_links: links} = await (await fetch(item.href)).json();
