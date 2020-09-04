@@ -1,5 +1,4 @@
 import * as React from 'react';
-
 import styles from './DataList.module.css'
 
 export const DataList = ({data}: any) => {
