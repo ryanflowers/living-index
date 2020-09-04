@@ -19,7 +19,7 @@ export const useData = () => {
           const [scores, details] = await Promise.all([
             (await fetch(links['ua:scores'].href)).json(),
             (await fetch(links['ua:details'].href)).json()]
-            );
+          );
   
           const population = details.categories.find((item: any) => item.id === "CITY-SIZE").data.find((item: any) => item.id === "POPULATION-SIZE").float_value;
           const scoreCategoryCount = scores.categories.length;
